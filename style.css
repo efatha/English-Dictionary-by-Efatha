@@ -51,9 +51,45 @@ body{
 .search-box button{
     padding:15px 0;
     width:25%;
-    background-color: #78acf9;
+    background-color:var(--efa-light-blue-);
     border:none;
     outline:none;
-    color: azure;
+    color: var(--efa-azure);
     border-radius: 5px;
+}
+.result{
+    position: relative;
+}
+.result h3{
+    font-size: 30px;
+    color:var(--efa-light-gray);
+}
+.result .word{
+    display:flex;
+    justify-content: space-between;
+    margin-top:80px;
+}
+.result button{
+    background-color: transparent;
+    color:var(--efa-light-blue-);
+    border: none;
+    outline:none;
+    font-size:20px;
+}
+.result .details{
+    display:flex;
+    gap: 10px;
+    color:#79a2e0;
+    margin:5px 0 20px;
+    font-size: 14px;
+}
+.word-meaning{
+    color:#8a939f;
+}
+.word-example{
+    color:#5b94ea; /*white blue*/
+    font-style: italic;
+    border-left:5px solid  #78acf9;/*light blue*/
+    padding-left: 20px;
+    margin-top: 30px;
 }
