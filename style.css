@@ -57,6 +57,18 @@ body{
     color: var(--efa-azure);
     border-radius: 5px;
 }
+.search-box button:focus{
+    background-color: var(--efa-light-gray);
+    color:whitesmoke;
+    transform: translatey(-2px);
+    width:100px;
+    box-shadow: 0 0 0 5px rgba(38, 33, 61, 0.1);
+}
+.search-box button:hover{
+    transition: background-color 3s;
+    background-color:gray;
+    color:var(--efa-azure);
+}
 .result{
     position: relative;
 }
