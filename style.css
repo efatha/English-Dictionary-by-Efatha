@@ -105,3 +105,28 @@ body{
     padding-left: 20px;
     margin-top: 30px;
 }
+.not_found{
+    align-items: center;
+    border-radius: 10%;
+    justify-content: center;
+    margin-left:33%;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.error{
+    background: linear-gradient(90deg, #78acf9, azure);
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media (max-width:678px) {
+    .search-box button:focus{
+    background-color: var(--efa-light-gray);
+    color:whitesmoke;
+    transform: translateX(-2px);
+    width:80px;
+    box-shadow: 0 0 0 3px rgba(38, 33, 61, 0.1);
+}
+}

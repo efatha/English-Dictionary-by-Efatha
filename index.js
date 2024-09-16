@@ -25,6 +25,11 @@ btn.addEventListener("click", () =>{
             <p class="word-example">${data[0].meanings[0].definitions[0].example || ""}</p>`;
             sound.setAttribute("src",`https:${data[0],phonetics[0].audio}`)
           console.log(sound);
+  })
+  .catch(() => {
+    result.innerHTML = `<h3 class="error">Couldn't find this word</h3>
+    <img src="Images/photosearch.jpg"width=150px alt="search-image" class="not_found">
+    `
   });
 });
 function playSound(){
