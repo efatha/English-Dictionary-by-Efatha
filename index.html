@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Efatha's English Dictionary - Search words and hear pronunciation">
     <title>English Dictionary by Efatha</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -13,8 +15,17 @@
     <div class="container">
         <h4 class="icloud">Efatha's Dictionary</h4>
         <div class="search-box">
-            <input type="text" placeholder="Type your word here..." id="inp-word">
-            <button id="search-btn">Search</button>
+            <input type="text" placeholder="Type your word here..." id="inp-word" aria-label="Word input">
+            <button id="search-btn" aria-label="Search">Search</button>
+        </div>
+        <div class="color-selector">
+            <label for="bg-color">Choose background color:</label>
+            <select id="bg-color">
+                <option value="var(--efa-light-blue-)">Light Blue</option>
+                <option value="var(--efa-white-blue)">White Blue</option>
+                <option value="var(--efa-azure)">Azure</option>
+                <option value="white">White</option>
+            </select>
         </div>
         <div class="result" id="result"></div>
     </div>
