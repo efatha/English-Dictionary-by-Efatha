@@ -41,12 +41,14 @@ body{
     justify-content: space-between;
 }
 .search-box input{
-    padding: 5px;
+    padding: 10px;
+    padding-left: 20px;
     width:70%;
     border:none;
     outline:none;
     border-bottom:3px solid #78acf9;
     font-size: 16px;
+    border-radius: 20px;
 }
 .search-box button{
     padding:15px 0;
@@ -129,4 +131,5 @@ body{
     width:80px;
     box-shadow: 0 0 0 3px rgba(38, 33, 61, 0.1);
 }
+
 }

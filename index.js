@@ -28,7 +28,7 @@ btn.addEventListener("click", () =>{
   })
   .catch(() => {
     result.innerHTML = `<h3 class="error">Couldn't find this word</h3>
-    <img src="Images/photosearch.jpg"width=150px alt="search-image" class="not_found">
+    <img src="Images/photosearch.jpg" width="150px" alt="search-image" class="not_found">
     `
   });
 });
