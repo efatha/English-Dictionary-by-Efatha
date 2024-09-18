@@ -5,13 +5,13 @@ const btn = document.getElementById("search-btn");
 
 btn.addEventListener("click", () => {
   let inputword = document.getElementById("inp-word").value;
-  
+
   // Fetch the word data
   fetch(`${url}${inputword}`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      
+
       // Display word details
       result.innerHTML = `
         <div class="word">
@@ -27,8 +27,24 @@ btn.addEventListener("click", () => {
         <p class="word-meaning">${data[0].meanings[0].definitions[0].definition}</p>
         <p class="word-example">${data[0].meanings[0].definitions[0].example || ""}</p>`;
 
+      // Search for American pronunciation
+      const phonetics = data[0].phonetics;
+      let audioSrc = "";
+      
+      // Loop through phonetics to find American pronunciation
+      for (let i = 0; i < phonetics.length; i++) {
+        if (phonetics[i].audio.includes("-us.mp3")) { // Check for American pronunciation
+          audioSrc = phonetics[i].audio;
+          break;
+        }
+      }
+
+      // If American pronunciation not found, use the first available one
+      if (!audioSrc && phonetics[0]?.audio) {
+        audioSrc = phonetics[0].audio;
+      }
+
       // Set audio if available
-      const audioSrc = data[0].phonetics[0]?.audio;
       if (audioSrc) {
         sound.setAttribute("src", audioSrc);
       } else {
